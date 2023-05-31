@@ -15,6 +15,7 @@ pathspec
 Pillow
 platformdirs
 pytesseract
+pyuwsgi
 tomli
 tomlkit
 typed-ast

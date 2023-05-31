@@ -9,6 +9,10 @@ venv/
 env*
 dist/
 build/
+bin/
+include/
+__pycache__/
+lib/
 *.egg
 *.egg-info/
 .tox/

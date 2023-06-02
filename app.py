@@ -46,6 +46,7 @@ def home():
             # Save the uploaded image to a temporary folder
             image_path = os.path.join(app.config["UPLOAD_FOLDER"], image.filename)
             image.save(image_path)
+            os.chmod(image_path, 755)
 
             # Extract text from the uploaded image
             extracted_text = extract_text_from_image(image_path)

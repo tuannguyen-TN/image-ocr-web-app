@@ -20,4 +20,4 @@ RUN pip3 install --no-cache-dir --upgrade -r requirements.txt
 
 COPY . .
 
-CMD ["uwsgi", "--http", "0.0.0.0:7860", "--master", "-p", "4", "-w", "main:app"]
+CMD ["uwsgi", "--http", "0.0.0.0:7860", "--master", "-p", "4", "-w", "app:app"]

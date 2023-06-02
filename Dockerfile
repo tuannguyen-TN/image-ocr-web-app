@@ -16,8 +16,8 @@ RUN apt-get update \
 ENV LC_ALL C.UTF-8
 ENV LANG C.UTF-8
 
-RUN pip3 install -r requirements.txt
+RUN pip3 install --no-cache-dir --upgrade -r requirements.txt
 
 COPY . .
 
-CMD ["python3", "-m" , "flask", "run", "--host=0.0.0.0"]
+CMD ["uwsgi", "--http", "0.0.0.0:7860", "--master", "-p", "4", "-w", "main:app"]

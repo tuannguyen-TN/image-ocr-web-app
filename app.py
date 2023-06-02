@@ -11,6 +11,7 @@ app.config["UPLOAD_FOLDER"] = f"{os.getcwd()}/temp"
 # Create the upload folder if it doesn't exist
 if not os.path.exists(app.config["UPLOAD_FOLDER"]):
     os.makedirs(app.config["UPLOAD_FOLDER"])
+    os.chmod(app.config["UPLOAD_FOLDER"], 755)
 
 
 def extract_text_from_image(image_path):
